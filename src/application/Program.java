@@ -11,7 +11,7 @@ public class Program {
 		
 		Department obj = new Department(1, "Bijous");
 		
-		Seller seller = new Seller(21, "Aluisio", "aluisio@gmail.com", new Date(), 3000.0, obj);
+		Seller seller = new Seller(21, "Aluisio", "aluisio@gmail", new Date(), 3000.0, obj);
 		
 		System.out.println(seller);
 	}

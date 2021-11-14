@@ -1,22 +1,19 @@
 package model.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 public class Seller implements Serializable {
 	private static final long serialVersionUID = 1L;
 
-	//Attributes
 	private Integer id;
 	private String name;
 	private String email;
 	private Date birthDate;
 	private Double baseSalary;
 	
-	//Associação com composição de objetos.
 	private Department department;
 	
-	//Constructors
 	public Seller() {
 	}
 
@@ -29,7 +26,6 @@ public class Seller implements Serializable {
 		this.department = department;
 	}
 
-	//Getters e Setters: todos os campos e composicao
 	public Integer getId() {
 		return id;
 	}
@@ -78,7 +74,6 @@ public class Seller implements Serializable {
 		this.department = department;
 	}
 
-	//hashCode and equals: apenas o campo id
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -104,10 +99,9 @@ public class Seller implements Serializable {
 		return true;
 	}
 
-	//toString: todos os campos e composicao
 	@Override
 	public String toString() {
 		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate + ", baseSalary="
 				+ baseSalary + ", department=" + department + "]";
-	}
+	}	
 }
