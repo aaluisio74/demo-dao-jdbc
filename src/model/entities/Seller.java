@@ -6,12 +6,14 @@ import java.util.Date;
 public class Seller implements Serializable {
 	private static final long serialVersionUID = 1L;
 
+	//Attributes
 	private Integer id;
 	private String name;
 	private String email;
 	private Date birthDate;
 	private Double baseSalary;
 	
+	//Associação: Composição dos objetos => Seller tem um Departamento.
 	private Department department;
 	
 	public Seller() {
@@ -74,6 +76,7 @@ public class Seller implements Serializable {
 		this.department = department;
 	}
 
+	//Para que os objetos possam ser comparados pelo conteúdo e não pela referência de ponteiros.
 	@Override
 	public int hashCode() {
 		final int prime = 31;
